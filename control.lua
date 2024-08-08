@@ -33,6 +33,12 @@ function check_players_play_time (event)
         if v.enabled and v.paused ~= true then
             v.time_remain = v.time_remain - 1
             if v.time_remain == 0 then
+                player.create_local_flying_text({
+                    text={"gt_messages.time-exeeded"},
+                    create_at_cursor = true, 
+                    time_to_live=freq,
+                    speed=0
+                })
                 player.print({"gt_messages.time-exeeded"}, {r = 0.5, g = 0, b = 0, a = 0.5})
                 v.enabled = false
             elseif v.time_remain < 5 then
