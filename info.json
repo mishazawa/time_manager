@@ -1,0 +1,10 @@
+{
+    "name": "time_manager",
+    "version": "0.1.0",
+    "title": "Time Manager",
+    "author": "momotaro",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1"],
+    "description": "This mod allows you to limit playtime."
+  }
+  
